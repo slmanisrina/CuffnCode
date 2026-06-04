@@ -4,9 +4,9 @@ Repositori ini dibuat untuk menuhi tugas Evaluasi 3 matakuliah Komputasi Paralel
 
 👥 Anggota
 Nisrina Salma - 152024043
----
 
 📌 Analisis Masalah dan Solusi Sistem
+---
 
 1. Deskripsi Masalah (Problem Statement)
 Perangkat *CuffnCode* mengandalkan *Pressure Sensor* untuk membaca pulsa tekanan darah secara *real-time*. Namun, tingginya volume sampling data mentah dari sensor menimbulkan beban komputasi yang masif. Jika pemrosesan algoritma dilakukan secara sekuensial (satu per satu), akan terjadi *bottleneck* pada CPU yang mengakibatkan *delay* signifikan dalam menampilkan hasil kalkulasi medis.
