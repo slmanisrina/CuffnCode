@@ -1,4 +1,5 @@
 🩺 Tugas Evaluasi 3 - Komputasi Paralel (CuffnCode)
+---
 
 Repositori ini dibuat untuk menuhi tugas Evaluasi 3 matakuliah Komputasi Paralel. 
 
