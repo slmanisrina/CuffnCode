@@ -6,10 +6,17 @@ Repositori ini dibuat untuk menuhi tugas Evaluasi 3 matakuliah Komputasi Paralel
 Nisrina Salma - 152024043
 ---
 
-📌 Problem & Solusi
-Perangkat *CuffnCode* punya *Pressure Sensor* (sensor tekanan) yang fungsinya buat baca data denyut nadi secara real-time. Masalahnya, data sensor yang masuk tuh banyak banget dan numpuk. Kalau diproses satu-satu (sekuensial), alatnya bakal lag atau telat nampilin hasil.
+## 📌 Analisis Masalah dan Solusi Sistem
 
-Solusinya, kami pake direktif `#pragma omp parallel for` dari OpenMP buat ngebagi beban komputasi ke beberapa thread CPU sekaligus biar proses filter data sensornya jadi jauh lebih cepet.
+### 1. Deskripsi Masalah (Problem Statement)
+Perangkat *CuffnCode* dirancang sebagai sistem tertanam (*embedded system*) untuk mengukur tekanan darah otomatis menggunakan *Pressure Sensor* (sensor tekanan). Sensor ini bekerja secara *real-time* dengan melakukan sampling data pulsa tekanan udara dari manset dalam volume yang sangat masif. 
+
+Tantangan utama pada sistem ini adalah tingginya beban komputasi saat melakukan pemrosesan sinyal mentah (*raw signal processing*) dari sensor. Jika seluruh tumpukan data sensor tersebut dieksekusi menggunakan metode konvensional secara sekuensial (tunggal/satu per satu), maka akan terjadi bottleneck pada CPU. Dampaknya, sistem akan mengalami *delay* (keterlambatan) yang signifikan dalam menampilkan hasil pembacaan tekanan sistolik dan diastolik kepada pengguna.
+
+### 2. Solusi Optimasi (Proposed Solution)
+Untuk mengatasi kendala latensi tersebut, kami mengimplementasikan arsitektur komputasi paralel pada tingkat perangkat lunak (*software optimization*) menggunakan library **OpenMP**. 
+
+Melalui penerapan direktif `#pragma omp parallel for`, beban kerja algoritma pemrosesan data sensor yang awalnya bersifat linier dipecah secara otomatis menjadi beberapa sub-tugas (*data parallelism*). Sub-tugas ini kemudian dieksekusi secara bersamaan (*simultan*) memanfaatkan multi-core atau multi-thread yang tersedia pada arsitektur prosesor. Dengan memparalelkan proses kalkulasi data sensor, waktu komputasi dapat dipangkas secara drastis sehingga perangkat mampu menyajikan informasi medis secara instan dan akurat tanpa gejala *lagging*.
 
 ---
 
