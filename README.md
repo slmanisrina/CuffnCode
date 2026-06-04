@@ -4,7 +4,6 @@ Repositori ini dibuat untuk menuhi tugas Evaluasi 3 matakuliah Komputasi Paralel
 
 👥 Anggota
 Nisrina Salma - 152024043
-```
 
 📌 Analisis Masalah dan Solusi Sistem
 ---
