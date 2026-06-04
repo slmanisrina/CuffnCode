@@ -36,5 +36,6 @@ Thread Berjalan   : 8 Thread
 Kesimpulan: Dengan memanfaatkan teknik paralel, 10 juta data sensor tekanan berhasil dieksekusi hanya dalam waktu 68 milidetik, membuktikan bahwa optimasi software ini sangat efektif untuk pemrosesan data medis secara real-time.
 
 📱 Link Video Demo 
+---
 Video demo running program bisa dicheck di sini:
 👉 [Link Video Demo] (https://www.google.com/search?q=Isi_pake_link_IG_Reels_kamu)
