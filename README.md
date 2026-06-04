@@ -37,5 +37,7 @@ Kesimpulan: Dengan memanfaatkan teknik paralel, 10 juta data sensor tekanan berh
 
 📱 Link Video Demo 
 ---
+```bash
 Video demo running program bisa dicheck di sini:
 👉 [Link Video Demo] (https://www.google.com/search?q=Isi_pake_link_IG_Reels_kamu)
+```
