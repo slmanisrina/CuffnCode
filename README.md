@@ -6,18 +6,13 @@ Repositori ini dibuat untuk menuhi tugas Evaluasi 3 matakuliah Komputasi Paralel
 Nisrina Salma - 152024043
 ---
 
-## 📌 Analisis Masalah dan Solusi Sistem
+📌 Analisis Masalah dan Solusi Sistem
 
-### 1. Deskripsi Masalah (Problem Statement)
-Perangkat *CuffnCode* dirancang sebagai sistem tertanam (*embedded system*) untuk mengukur tekanan darah otomatis menggunakan *Pressure Sensor* (sensor tekanan). Sensor ini bekerja secara *real-time* dengan melakukan sampling data pulsa tekanan udara dari manset dalam volume yang sangat masif. 
+1. Deskripsi Masalah (Problem Statement)
+Perangkat *CuffnCode* mengandalkan *Pressure Sensor* untuk membaca pulsa tekanan darah secara *real-time*. Namun, tingginya volume sampling data mentah dari sensor menimbulkan beban komputasi yang masif. Jika pemrosesan algoritma dilakukan secara sekuensial (satu per satu), akan terjadi *bottleneck* pada CPU yang mengakibatkan *delay* signifikan dalam menampilkan hasil kalkulasi medis.
 
-Tantangan utama pada sistem ini adalah tingginya beban komputasi saat melakukan pemrosesan sinyal mentah (*raw signal processing*) dari sensor. Jika seluruh tumpukan data sensor tersebut dieksekusi menggunakan metode konvensional secara sekuensial (tunggal/satu per satu), maka akan terjadi bottleneck pada CPU. Dampaknya, sistem akan mengalami *delay* (keterlambatan) yang signifikan dalam menampilkan hasil pembacaan tekanan sistolik dan diastolik kepada pengguna.
-
-### 2. Solusi Optimasi (Proposed Solution)
-Untuk mengatasi kendala latensi tersebut, kami mengimplementasikan arsitektur komputasi paralel pada tingkat perangkat lunak (*software optimization*) menggunakan library **OpenMP**. 
-
-Melalui penerapan direktif `#pragma omp parallel for`, beban kerja algoritma pemrosesan data sensor yang awalnya bersifat linier dipecah secara otomatis menjadi beberapa sub-tugas (*data parallelism*). Sub-tugas ini kemudian dieksekusi secara bersamaan (*simultan*) memanfaatkan multi-core atau multi-thread yang tersedia pada arsitektur prosesor. Dengan memparalelkan proses kalkulasi data sensor, waktu komputasi dapat dipangkas secara drastis sehingga perangkat mampu menyajikan informasi medis secara instan dan akurat tanpa gejala *lagging*.
-
+2. Solusi Optimasi (Proposed Solution)
+Untuk mengatasi latensi tersebut, kami menerapkan optimasi komputasi paralel menggunakan **OpenMP**. Dengan mengintegrasikan direktif `#pragma omp parallel for`, beban komputasi yang besar dieksekusi secara simultan (*data parallelism*) memanfaatkan *multi-thread* prosesor. Pendekatan ini berhasil memangkas waktu pemrosesan data sensor secara drastis, sehingga sistem mampu beroperasi secara instan tanpa mengalami *lagging*.
 ---
 
 💻 Cara Run Program
