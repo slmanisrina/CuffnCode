@@ -14,9 +14,9 @@ Perangkat CuffnCode dirancang untuk mengukur tekanan darah pasien secara langsun
 
 2. Solusi Optimasi (Proposed Solution)
 Untuk mengatasi masalah keterlambatan tersebut, kami menerapkan metode bagi-tugas menggunakan teknologi OpenMP. Melalui perintah khusus `#pragma omp parallel for`, kami membagi tumpukan data yang besar tersebut agar dikerjakan secara bersamaan oleh beberapa inti prosesor (multi-thread) sekaligus. Karena beban kerja dikerjakan secara gotong-royong di waktu yang sama, waktu pemrosesan data sensor terpangkas secara drastis. Hasilnya, perangkat CuffnCode dapat menyajikan informasi medis secara instan dan lancar tanpa mengalami kendala macet (lagging).
----
 
 💻 Cara Run Program
+---
 
 Saya melakukan simulasi pemrosesan 10.000.000 data sensor tekanan di file `main.cpp`. Cara compile dan run lewat terminal:
 
@@ -30,6 +30,8 @@ g++ -fopenmp main.cpp -o program_cuff
 ```
 
 📊 Hasil Pengujian & Performa
+---
+
 Berdasarkan hasil uji coba pada perangkat lokal (Laptop dengan 8 Thread Aktif), berikut adalah performa yang didapatkan:
 
 Jumlah Data Sensor : 10.000.000 data
