@@ -40,5 +40,6 @@ Kesimpulan: Dengan memanfaatkan teknik paralel, 10 juta data sensor tekanan berh
 📱 Link Video Demo 
 ---
 Video demo running program bisa dicheck melalui:
+
 👉 https://drive.google.com/file/d/1lEt5WDyWRmb2wIAbFU6MSBgG9adPLjN3/view?usp=sharing
 
