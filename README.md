@@ -10,7 +10,7 @@ Nisrina Salma - 152024043
 ---
 
 1. Deskripsi Masalah (Problem Statement)
-Perangkat *CuffnCode* mengandalkan *Pressure Sensor* untuk membaca pulsa tekanan darah secara *real-time*. Namun, tingginya volume sampling data mentah dari sensor menimbulkan beban komputasi yang masif. Jika pemrosesan algoritma dilakukan secara sekuensial (satu per satu), akan terjadi *bottleneck* pada CPU yang mengakibatkan *delay* signifikan dalam menampilkan hasil kalkulasi medis.
+Perangkat *CuffnCode* mengandalkan *Pressure Sensor* untuk membaca tekanan darah secara *real-time*. Namun, tingginya volume sampling data mentah dari sensor menimbulkan beban komputasi yang masif. Jika pemrosesan algoritma dilakukan secara sekuensial (satu per satu), akan terjadi *bottleneck* pada CPU yang mengakibatkan *delay* signifikan dalam menampilkan hasil kalkulasi medis.
 
 2. Solusi Optimasi (Proposed Solution)
 Untuk mengatasi latensi tersebut, kami menerapkan optimasi komputasi paralel menggunakan **OpenMP**. Dengan mengintegrasikan direktif `#pragma omp parallel for`, beban komputasi yang besar dieksekusi secara simultan (*data parallelism*) memanfaatkan *multi-thread* prosesor. Pendekatan ini berhasil memangkas waktu pemrosesan data sensor secara drastis, sehingga sistem mampu beroperasi secara instan tanpa mengalami *lagging*.
