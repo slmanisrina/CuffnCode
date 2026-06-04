@@ -2,7 +2,6 @@
 
 Repositori ini dibuat untuk menuhi tugas Evaluasi 3 matakuliah Komputasi Paralel. 
 
-```bash
 👥 Anggota
 Nisrina Salma - 152024043
 ```
