@@ -33,7 +33,7 @@ g++ -fopenmp main.cpp -o program_cuff
 Berdasarkan hasil uji coba pada perangkat lokal (Laptop dengan 8 Thread Aktif), berikut adalah performa yang didapatkan:
 
 Jumlah Data Sensor : 10.000.000 data
-Waktu Eksekusi    : 68.6345 ms
+Waktu Eksekusi    : 125.389 ms
 Thread Berjalan   : 8 Thread
 
 Kesimpulan: Dengan memanfaatkan teknik paralel, 10 juta data sensor tekanan berhasil dieksekusi hanya dalam waktu 68 milidetik, membuktikan bahwa optimasi software ini sangat efektif untuk pemrosesan data medis secara real-time.
