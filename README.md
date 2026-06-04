@@ -2,7 +2,7 @@
 
 Repositori ini dibuat untuk menuhi tugas Evaluasi 3 matakuliah Komputasi Paralel. 
 
-👥 Kelompok Kami
+👥 Anggota
 Nisrina Salma - 152024043
 ---
 
